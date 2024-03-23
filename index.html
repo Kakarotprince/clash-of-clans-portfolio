@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv = "refresh" content = "6; url = main.html" />
+    <style>
+        html,body{
+            margin: 0;
+            height: 100;
+        }
+        @font-face {
+  font-family: myFirstFont;
+  src: url(supercell-magic-webfont.woff);
+}
+.bg{
+  background-image: url("home.jpg"); 
+}
+  
+        .fullscr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 2s ease-in-out 4s forwards;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    font-family: myFirstFont;
+    font-weight: bold;
+    text-shadow: 0 0 5px #888,
+                0 0 10px #eee,
+                0 0 20px #ddd,
+                0 0 30px #ccc,  
+                0 0 40px #bbb,
+                0 0 55px #aaa,
+                0 0 70px #999;
+  }
+  
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+    </style>
+    <title>Profotolio</title>
+</head>
+<body>
+  <div class="bg">
+    <audio src="01. Clash of Clans Intro.mp3" type="audio/mp3" autoplay></audio>
+    <div id="Intro" class="fullscr">
+        
+        <div >
+            <h1>ARU</h1>
+            <h1>N/LI</h1>
+            <h1>CHT</h1></div>
+    </div>
+  </div>
+</body>
+</html>

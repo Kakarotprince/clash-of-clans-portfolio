@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Village</title>
+    <style>
+        body, html {
+            height: 100%;
+            background-color:#1b262c ;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            color: aliceblue;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                clip-path: inset(45% 20% 45% 20%);
+            }
+
+            to {
+                opacity: 1;
+                clip-path: inset(0% 0% 0% 0%);
+            }
+        }
+
+        .revealing-image {
+            background-size: cover;
+            height: 680px;
+            width: 1500px;
+            margin: 7px;
+            border-radius: 49px;
+            box-shadow: 0 0 49px rgba(0, 0, 0, 0, 0);
+            view-timeline-name: --revealing-image;
+            view-timeline-axis: block;
+            animation: linear reveal both;
+            animation-timeline: --revealing-image;
+            animation-range: entry 25% cover 50%;
+            position: relative;
+            display: inline-block;
+            color: #f4b0b0;
+            overflow: auto;
+        }   
+        .revealing-image *{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index:2;
+        }
+        .revealing-image div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index:1;
+            color:#f4b0b0;
+            text-align:center;
+            padding:8px;
+            padding-top:35%;
+            background-color:rgba(0,0,0,0.7);
+            border-radius:16px;
+            opacity:0;
+            transition:.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .revealing-image div:target{
+            opacity:1;  
+            z-index:5;
+        }
+
+
+        @supports(animation-range: 0vh 90vh) {
+            @keyframes sticky-parallax-header-move-and-size {
+                from {
+                    opacity: 1;
+                }
+
+                to {
+                    opacity: 0;
+                }
+            }
+
+            #sticky-parallax-header {
+                position: fixed;
+                top: 0;
+                animation: sticky-parallax-header-move-and-size linear forwards;
+                animation-timeline: scroll();
+                animation-range: 0vh 90vh;
+            }
+
+            .container {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+            }
+
+            img{
+                width: 100%;
+                display: block;
+            }
+
+            body {
+                padding-top: 100vh;
+                margin: 0;
+            }
+        }
+
+        .text {
+            position: absolute;   
+        }
+
+        .revealing-image h1, .revealing-image h2, .revealing-image ul {
+            font-family: 'Press Start 2P', cursive;
+            color: #f4b0b0;
+            text-shadow: 2px 2px 4px #000000;
+            font-size: 24px;
+            margin: 0;
+            padding: 10px;
+            line-height: 1.5;
+        }
+
+        marquee {
+            font-size: 16px;
+        }
+
+        a {
+            color: #f4b0b0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="sticky-parallax-header" class="container" style="background-image: url(header.jpg);height: 400px;width: 1500px;background-size: contain;background-repeat: no-repeat;">
+            <h1>CLASH OF CLANS PORTFOLIO</h1>
+        </div>
+    </header>
+    <div><a href="index.html">Restart</a></div>
+    <section>
+        <div>
+            <div>
+                <ul>
+                    <marquee direction="right" behavior="alternate"><li> Hey This Is Arun Prakash N</li></marquee>
+                    <marquee behavior="alternate"><li>Alias :Licht</li></marquee>
+                    <marquee direction="right" behavior="alternate"><li>Presenting to You </li></marquee>
+                    <marquee behavior="alternate"><li>MY Bases</li></marquee>
+                </ul>
+                <ul>
+                    <li>Town Hall 12</li>
+                    <li>League Ranking - Crystall 2</li>
+                    <li>157 Stars Acchived from clan wars</li>
+                    <li>7 th best player in class</li>
+                </ul>
+                <ul>
+                    <li>Builder Base - LVL 9</li>
+                    <li>League Ranking - Iron 2</li>
+                    <li>523 total Wins</li>
+                </ul>
+            </div>
+            <div class="revealing-image" style="background-image: url(Home.jpg);">
+                <a href="#homebase"></a>
+                <div id="homebase">
+                    <h1>Home base</h1>
+
+                </div>
+            </div>
+            <div class="revealing-image" style="background-image: url(Builder.jpg);">
+                <a href="#bbase"></a>
+                <div id="bbase">
+                    <h1>Builder Base</h1>
+                </div>
+            </div>
+            <div class="revealing-image" style="background-image: url(Builder2.jpg);">
+                <div id="bb2">
+                    <h2>O.T.T.O'S base</h2>
+                </div>
+                <a href="#bb2"></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
